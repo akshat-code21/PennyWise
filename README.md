@@ -1,85 +1,104 @@
-# PennyWise - Expense Tracking Application
+# PennyWise - Modern Expense Tracking Application
 
-PennyWise is a comprehensive expense tracking application that helps users manage their personal finances effectively. Built with a Node.js backend and EJS frontend templating engine, this application provides an intuitive interface for tracking and managing expenses.
+PennyWise is a sophisticated expense tracking application built with React and TypeScript and Node.js + Express.js Backend, featuring an intuitive interface and powerful visualization tools to help users manage their personal finances effectively.
 
-## Features
+## ✨ Key Features
 
-- 💰 Track daily expenses and income
-- 📊 View detailed expense breakdowns
-- ✏️ Modify existing expense entries
-- 🗑️ Delete unwanted expense records
-- 📱 Responsive design for both desktop and mobile use
+- 📊 Interactive dashboards with spending analytics
+- 💳 Detailed expense tracking and categorization
+- 📈 Visual data representation with charts and graphs
+- 💡 Smart saving tips and financial insights
+- 🎯 Budget planning and goal setting
+- 📱 Responsive design optimized for all devices
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### Backend
+### Frontend
+- React.js with TypeScript
+- Tailwind CSS for styling
+- Shadcn UI components
+- Chart.js for data visualization
+- React Query for data fetching
+- React Hook Form for form management
+
+### Backend [Link to backend](https://github.com/apurvdugar/PennyWise/tree/master/PennyWise-Backend)
 - Node.js
 - Express.js
 - Environment variables (.env) for configuration
 
-### Frontend
-- EJS (Embedded JavaScript templating)
-- Vanilla JavaScript
-- CSS3
-- Responsive Design
 
-
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm (Node Package Manager)
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
 ### Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/PennyWise.git
-    ```
+```bash
+git clone https://github.com/yourusername/PennyWise-Frontend-React.git
+```
 
 2. Navigate to the project directory:
-    ```bash
-    cd PennyWise
-    ```
-3. Install dependencies for both frontend and backend:
-    Install backend dependencies
-    ```bash
-    cd PennyWise-Backend
-    npm install
-    ```
-    Install frontend dependencies
-    ```bash
-    cd FRONTEND
-    npm install
-    ```
-4. Configure environment variables:
-    - Create a `.env` file in the PennyWise-Backend directory
-    - Add necessary environment variables (database connection, ports, etc.)
-5. Start the application:
-    - Start the backend server
-    ```bash
-    cd PennyWise-Backend
-    npm start
-    ```
-    - Start the frontend server
-    ```bash
-    cd FRONTEND
-    npm start
-    ```
 
-## Usage
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-1. Access the application through your web browser at `http://localhost:8080`
-2. Add new expenses using the "Add Expense" button
-3. View detailed expense information by clicking on individual entries
-4. Modify or delete expenses as needed
-5. Use the dashboard to track your spending patterns
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## License
+5. Open your browser and visit `http://localhost:5173`
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── dashboard/
+│   │   ├── layout/
+│   │   ├── ui/
+│   │   └── savingTips/
+│   └── ui/
+├── hooks/
+├── styles/
+└── types/
+```
+
+## 🎯 Usage
+
+1. Sign in to your account
+2. Navigate the dashboard to view your financial overview
+3. Add new expenses using the "Add Transaction" button
+4. View detailed analytics in the charts section
+5. Check saving tips for personalized financial advice
+6. Manage your expenses through the detailed expenses table
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-- Thanks to all contributors who have helped shape PennyWise
-- Special thanks to the Node.js and EJS communities for their excellent documentation
+- Thanks to the React and TypeScript communities
+- Shadcn UI for the beautiful component library
+- Chart.js for the visualization tools
+- All contributors who have helped improve PennyWise

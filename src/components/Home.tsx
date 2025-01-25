@@ -1,6 +1,7 @@
 import CardsComponent from "./CardsComponent";
 import Gallery from "./Gallery";
 import ImageComponent from "./ImageComponent";
+import MacbookSection from "./MacbookSection";
 import Navbar from "./Navbar";
 import { TypewriterComponent } from "./TypeWriterComponent";
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </div>
       <CardsComponent/>
       <Gallery/>
+      <MacbookSection/>
     </div>
   );
 }

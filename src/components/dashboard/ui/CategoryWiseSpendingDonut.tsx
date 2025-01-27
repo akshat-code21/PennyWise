@@ -53,20 +53,7 @@ const chartData = [
 
 
 
-export function CategoryWiseSpendingDonut({categorySpending}:Record<string,number>) {
-  // const arr = Object.keys(categorySpending)
-  // console.log(arr);
-  //   var persons = { 
-  //     john: { age: 23, year:2010},
-  //     jack: { age: 22, year:2011},
-  //     jenny: { age: 21, year:2012}
-  // }
-  // var resultArray = Object.keys(persons).map(function(personNamedIndex){
-  //   let person = persons[personNamedIndex];
-  //   // do something with person
-  //   return person;
-  // });
-  // console.log(resultArray);
+export function CategoryWiseSpendingDonut() {
   const totalVisitors = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
   }, [])

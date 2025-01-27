@@ -141,6 +141,8 @@ export default function Buttons() {
         })
       );
 
+      window.dispatchEvent(new Event("expense-added"));
+
       setModalOpen(false);
       setFormData({ description: "", amount: "", category: "" });
       toast({

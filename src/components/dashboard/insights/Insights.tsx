@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {CategoryWiseSpendingCard} from "./CategoryWiseSpendingCard";
+import { CategoryWiseSpendingCard } from "./CategoryWiseSpendingCard";
 import HighestExpenseCard from "./HighestExpenseCard";
 import LowestExpenseCard from "./LowestExepenseCard";
 import MonthlyTotalCard from "./MonthlyTotalCard";
@@ -21,6 +21,21 @@ type Statistics = {
 export default function Insights() {
   const [stats, setStats] = useState<Statistics | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+  useEffect(() => {
+    const handleRefresh = () => {
+      setRefreshTrigger((prev) => prev + 1);
+    };
+
+    window.addEventListener("expense-added", handleRefresh);
+
+    // Cleanup listener
+    return () => {
+      window.removeEventListener("expense-added", handleRefresh);
+    };
+  }, []);
+
   useEffect(() => {
     const fetchedStatistics = async () => {
       try {
@@ -41,7 +56,8 @@ export default function Insights() {
       }
     };
     fetchedStatistics();
-  }, []);
+  }, [refreshTrigger]);
+
   if (error) {
     return <div>Error: {error}</div>;
   }
@@ -65,8 +81,8 @@ export default function Insights() {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <CategoryWiseSpendingCard categorySpending ={stats?.categorySpending}/>
-        <SpendingTrends monthlySpending ={stats?.monthlySpending}/>
+        <CategoryWiseSpendingCard categorySpending={stats?.categorySpending} />
+        <SpendingTrends monthlySpending={stats?.monthlySpending} />
       </div>
     </div>
   );

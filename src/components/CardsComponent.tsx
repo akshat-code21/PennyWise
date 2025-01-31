@@ -1,9 +1,11 @@
 import { CardCarouselComponent } from "./CardCarouselComponent";
 
-export default function CardsComponent(){
-    return(
-        <div className="bg-chrome-700 w-full min-h-screen py-12 mt-24">
-            <CardCarouselComponent/>
-        </div>
+export default function CardsComponent() {
+    return (
+        <section className="w-full bg-[#FFF9F4] py-12 sm:py-16 md:py-20">
+            <div className="container mx-auto">
+                <CardCarouselComponent />
+            </div>
+        </section>
     )
 }

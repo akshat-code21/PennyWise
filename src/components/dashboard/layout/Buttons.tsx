@@ -31,11 +31,13 @@ import {
 import { useToast } from "@/components/hooks/use-toast";
 import axios from "axios";
 import Loader from "@/components/ui/loader";
+
 interface ExpenseFormData {
   description: string;
   amount: string;
   category: string;
 }
+
 export type Expense = {
   id: string;
   description: string;
@@ -43,6 +45,7 @@ export type Expense = {
   createdAt: string;
   amount: number;
 };
+
 const categories = [
   { value: "Shopping", label: "Shopping" },
   { value: "Health", label: "Health" },
@@ -50,6 +53,14 @@ const categories = [
   { value: "Food", label: "Food" },
   { value: "Entertainment", label: "Entertainment" },
 ];
+
+const buttons = [
+  { path: "/dashboard", label: "Home" },
+  { path: "/dashboard/detailedExpenses", label: "Expenses" },
+  { path: "/dashboard/insights", label: "Insights" },
+  { path: "/dashboard/savingTips", label: "Tips" }
+];
+
 export default function Buttons() {
   const { toast } = useToast();
   const [modalOpen, setModalOpen] = useState(false);
@@ -170,21 +181,29 @@ export default function Buttons() {
   }
 
   return (
-    <div className="flex items-center justify-center gap-3 my-3">
-      <Button
-        asChild
-        className={cn(
-          "bg-chrome-200 text-black hover:bg-green-500 hover:text-white  hover:scale-110",
-          isActive("/dashboard") && "bg-green-500 text-white"
-        )}
-      >
-        <Link to="/dashboard">Home</Link>
-      </Button>
+    <div className="flex flex-wrap items-center justify-center gap-2 p-2 sm:p-3 md:p-4">
+      {buttons.map((button, index) => (
+        <Button
+          key={index}
+          asChild
+          className={cn(
+            "text-xs sm:text-sm md:text-base bg-chrome-200 text-black hover:bg-green-500 hover:text-white transition-all",
+            "px-2 sm:px-3 md:px-4 py-1 sm:py-2",
+            "min-w-[80px] sm:min-w-[100px] md:min-w-[120px]",
+            "whitespace-nowrap overflow-hidden text-ellipsis",
+            isActive(button.path) && "bg-green-500 text-white"
+          )}
+        >
+          <Link to={button.path}>{button.label}</Link>
+        </Button>
+      ))}
       <Dialog open={modalOpen} onOpenChange={setModalOpen}>
         <DialogTrigger asChild>
           <Button
             onClick={() => setModalOpen(true)}
-            className="bg-chrome-200 text-black hover:bg-green-500 hover:text-white  hover:scale-110"
+            className="text-xs sm:text-sm md:text-base bg-chrome-200 text-black hover:bg-green-500 hover:text-white transition-all
+                     px-2 sm:px-3 md:px-4 py-1 sm:py-2
+                     min-w-[80px] sm:min-w-[100px] md:min-w-[120px]"
           >
             Add Expense
           </Button>
@@ -265,33 +284,6 @@ export default function Buttons() {
           </div>
         </DialogContent>
       </Dialog>
-      <Button
-        asChild
-        className={cn(
-          "bg-chrome-200 text-black hover:bg-green-500 hover:text-white  hover:scale-110",
-          isActive("/dashboard/detailedExpenses") && "bg-green-500 text-white"
-        )}
-      >
-        <Link to="/dashboard/detailedExpenses">Detailed Expenses</Link>
-      </Button>
-      <Button
-        asChild
-        className={cn(
-          "bg-chrome-200 text-black hover:bg-green-500 hover:text-white  hover:scale-110",
-          isActive("/dashboard/insights") && "bg-green-500 text-white"
-        )}
-      >
-        <Link to="/dashboard/insights">Insights</Link>
-      </Button>
-      <Button
-        asChild
-        className={cn(
-          "bg-chrome-200 text-black hover:bg-green-500 hover:text-white  hover:scale-110",
-          isActive("/dashboard/savingTips") && "bg-green-500 text-white"
-        )}
-      >
-        <Link to="/dashboard/savingTips">Saving Tips</Link>
-      </Button>
     </div>
   );
 }

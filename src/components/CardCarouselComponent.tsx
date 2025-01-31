@@ -12,10 +12,12 @@ export function CardCarouselComponent() {
 
   return (
     <div className="w-full h-full pb-8">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans mb-8">
+      <h2 className="text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 mb-8 px-4 sm:px-6 md:px-8">
         Uncover Expenses.
       </h2>
-      <Carousel items={cards} />
+      <div className="w-full overflow-hidden">
+        <Carousel items={cards} />
+      </div>
     </div>
   );
 }

@@ -14,6 +14,7 @@ PennyWise is a sophisticated expense tracking application built with React and T
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React.js with TypeScript
 - Tailwind CSS for styling
 - Shadcn UI components
@@ -21,21 +22,23 @@ PennyWise is a sophisticated expense tracking application built with React and T
 - React Query for data fetching
 - React Hook Form for form management
 
-### Backend [Link to backend](https://github.com/apurvdugar/PennyWise/tree/master/PennyWise-Backend)
+### Backend [PennyWise Backend](https://github.com/akshat-code21/PennyWise-Backend-TS/tree/master)
+
 - Node.js
 - Express.js
 - Environment variables (.env) for configuration
 
-
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn package manager
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/PennyWise-Frontend-React.git
 ```
@@ -43,6 +46,7 @@ git clone https://github.com/yourusername/PennyWise-Frontend-React.git
 2. Navigate to the project directory:
 
 3. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -50,6 +54,7 @@ yarn install
 ```
 
 4. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -92,13 +97,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Thanks to the React and TypeScript communities
-- Shadcn UI for the beautiful component library
-- Chart.js for the visualization tools
-- All contributors who have helped improve PennyWise

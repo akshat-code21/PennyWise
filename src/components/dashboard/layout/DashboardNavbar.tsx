@@ -13,7 +13,7 @@ export default function DashboardNavbar(){
                 </div>
             </div>
             <div className="my-2 sm:my-0 sm:mr-3 md:mr-5">
-                <Button size="sm" className="px-3 sm:px-4 md:px-6 py-1 sm:py-2" asChild>
+                <Button size="lg" className="px-3 sm:px-4 md:px-6 py-1 sm:py-2" asChild>
                     <Link to="/">Log Out</Link>
                 </Button>
             </div>

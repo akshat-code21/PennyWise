@@ -47,7 +47,7 @@ export default function LoginCard() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://pennywise-backend-q3e3.onrender.com/api/v1/auth/signin",
+        "https://pennywise-backend-ts.onrender.com/api/v1/auth/signin",
         {
           email: data.email,
           password: data.password,

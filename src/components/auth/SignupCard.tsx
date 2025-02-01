@@ -57,7 +57,7 @@ export default function SignupCard() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://pennywise-backend-q3e3.onrender.com/api/v1/auth/signup",
+        "https://pennywise-backend-ts.onrender.com/api/v1/auth/signup",
         {
           name: data.name,
           email: data.email,

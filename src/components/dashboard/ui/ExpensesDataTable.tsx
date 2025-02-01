@@ -75,7 +75,7 @@ export default function ExpensesDataTable() {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const response = await axios.get("https://pennywise-backend-q3e3.onrender.com/api/v1/xpenses", {
+        const response = await axios.get("https://pennywise-backend-ts.onrender.com/api/v1/expenses", {
           headers: {
             "Content-Type": "application/json",
             token: token,

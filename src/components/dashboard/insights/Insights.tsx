@@ -41,7 +41,7 @@ export default function Insights() {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "https://pennywise-backend-q3e3.onrender.com/api/v1/insights/statistics",
+          "https://pennywise-backend-ts.onrender.com/api/v1/insights/statistics",
           {
             headers: {
               "Content-Type": "application/json",

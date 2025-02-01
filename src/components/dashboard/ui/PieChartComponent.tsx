@@ -60,7 +60,7 @@ export function PieChartComponent() {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "https://pennywise-backend-q3e3.onrender.com/api/v1/expenses",
+          "https://pennywise-backend-ts.onrender.com/api/v1/expenses",
           {
             headers: {
               "Content-Type": "application/json",

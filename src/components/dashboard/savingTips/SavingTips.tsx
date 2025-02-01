@@ -12,7 +12,7 @@ export default function SavingTips() {
         SetIsLoading(true)
         try{
             const token = localStorage.getItem('token')
-            const response = await axios.get("https://pennywise-backend-q3e3.onrender.com/api/v1/insights/ai-analysis",{
+            const response = await axios.get("https://pennywise-backend-ts.onrender.com/api/v1/insights/ai-analysis",{
                 headers:{
                     "token" : token
                 }

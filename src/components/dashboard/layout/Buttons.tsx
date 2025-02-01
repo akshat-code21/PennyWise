@@ -133,7 +133,7 @@ export default function Buttons() {
       };
 
       const response = await axios.post(
-        "https://pennywise-backend-q3e3.onrender.com/api/v1/expenses",
+        "https://pennywise-backend-ts.onrender.com/api/v1/expenses",
         expenseData,
         {
           headers: {
